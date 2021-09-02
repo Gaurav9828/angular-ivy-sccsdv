@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'radio/active/welcome', component: WelcomePageComponent },
   { path: 'radio/active/nav/bar', component: NavBarComponent },
   { path: 'radio/active/admin/login', component: AdminloginComponent },
-  { path: 'radio/active/landing/page', component: LandingPageComponent },
+  { path: 'radio/active', component: LandingPageComponent },
   /*
   { path: 'student/admission/test/form', component: StudentAdmissionTestFormComponent },
   { path: 'student/welcome', component: StudentWelcomeComponent, canActivate: [AuthGuard]},
@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'admin/employee/view', component: ViewEmployeeComponent, canActivate: [AuthGuard]},
   { path: 'admin/employee/registration', component: EmployeeRegistrationComponent, canActivate: [AuthGuard]},
   { path: 'admin/welcome', component: AdminWelcomeComponent, canActivate: [AuthGuard]},*/
-  { path: '**', redirectTo: 'radio/active/landing/page' }
+  { path: '**', redirectTo: 'radio/active' }
 ];
 
 @NgModule({
