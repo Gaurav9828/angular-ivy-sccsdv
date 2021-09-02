@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminloginComponent } from './landing-page/adminlogin/adminlogin.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavBarComponent } from './landing-page/nav-bar/nav-bar.component';
 import { WelcomePageComponent } from './landing-page/welcome-page/welcome-page.component';
 const routes: Routes = [
   { path: 'radio/active/welcome', component: WelcomePageComponent },
   { path: 'radio/active/nav/bar', component: NavBarComponent },
+  { path: 'radio/active/admin/login', component: AdminloginComponent },
   { path: 'radio/active/landing/page', component: LandingPageComponent },
   /*
   { path: 'student/admission/test/form', component: StudentAdmissionTestFormComponent },
