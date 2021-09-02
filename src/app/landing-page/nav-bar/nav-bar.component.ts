@@ -11,11 +11,12 @@ export class NavBarComponent implements OnInit {
   public menuList: Array<UserMenu>;
 
   constructor(private router: Router) {
-    this.menuList = this.menuManager();
+    this.menuList = this.generateMenu();
+    this.menuManager();
   }
   ngOnInit(): void {}
 
-  private menuManager(): Array<UserMenu> {
+  private generateMenu(): Array<UserMenu> {
     let useMenuList: Array<UserMenu> = new Array<UserMenu>();
     useMenuList.push(new UserMenu(0, 'Sell', 1, 'Y', '', 0));
 
@@ -28,8 +29,27 @@ export class NavBarComponent implements OnInit {
     useMenuList.push(new UserMenu(21, 'New Order', 1, 'Y', '', 2));
     useMenuList.push(new UserMenu(22, 'Manage Order', 1, 'Y', '', 2));
     useMenuList.push(new UserMenu(23, 'Order Details', 1, 'Y', '', 2));
-
     return useMenuList;
+  }
+
+  public menuManager() {
+    let flagMenu = true;
+    for (let menu of this.menuList) {
+      flagMenu = true;
+      if (menu.menuLevel == 0) {
+        for (let menu1 of this.menuList) {
+          if (this.menuList.indexOf(menu) != this.menuList.indexOf(menu1)) {
+            if (menu.id == menu1.parentMenu) {
+              flagMenu = false;
+              break;
+            }
+          }
+        }
+        if (flagMenu == true) {
+          this.menuList.splice(this.menuList.indexOf(menu), 1);
+        }
+      }
+    }
   }
 
   navigationPage(routerLink: string) {
