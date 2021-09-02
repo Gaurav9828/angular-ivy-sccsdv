@@ -1,1 +1,122 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: auto;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+.grayBgSheet {
+  background-color: #6d6868cb;
+  height: auto;
+  margin-top: 20%;
+  overflow-x: unset;
+  overflow-y: hidden;
+}
+
+.formBgSheet {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: #918787cb;
+  height: auto;
+  overflow-x: unset;
+  overflow: hidden;
+}
+
+.lable {
+  color: rgba(255, 255, 255, 0.877);
+  font-size: x-large;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.errorText {
+  color: red;
+  font-size: small;
+}
+
+.successText {
+  color: rgb(58, 114, 3);
+  font-size: small;
+}
+
+.button {
+  background-color: rgb(13, 13, 44);
+  width: 100px;
+  height: auto;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  outline: none;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.contentBg {
+  height: auto;
+  color: white;
+  background: rgb(27, 27, 68);
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.dropdown-menu {
+  margin-top: 0px !important;
+  width: auto !important;
+  height: auto !important;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(230, 224, 224);
+}
+
+.dropdown-menu button {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  width: auto;
+  color: #ffffffe1;
+  display: block;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-menu button:hover,
+.overlay button:focus {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.nav-link {
+  outline: none;
+  font-size: 16px;
+}
+
+.vMiddle {
+  height: auto;
+  margin-top: 5%;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+section {
+  padding: 10px;
+}
+
+section .section-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
