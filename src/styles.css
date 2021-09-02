@@ -1,8 +1,10 @@
-.center {
-  display: flex;
-  justify-content: center;
+.button {
+  background-color: darkslateblue;
+  color: aliceblue;
+  width: 100%;
+  border-color: aliceblue;
 }
 
-.radioActiveLogo {
-  opacity: 0.1;
+form {
+  padding: 10px 10px 10px 10px;
 }

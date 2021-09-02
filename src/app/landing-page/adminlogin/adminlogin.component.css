@@ -1,0 +1,10 @@
+.formBox {
+  position: relative;
+  line-height: 0.9;
+  text-align: left;
+  color: aliceblue;
+  font-size: x-large;
+  background-color: rgba(3, 3, 3, 0.651);
+  border-radius: 3%;
+  width: fit-content;
+}
