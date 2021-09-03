@@ -12,23 +12,26 @@ export class NavBarComponent implements OnInit {
 
   constructor(private router: Router) {
     this.menuList = this.generateMenu();
-    this.menuManager();
+    if (this.menuList) {
+      this.menuManager();
+    }
   }
   ngOnInit(): void {}
 
   private generateMenu(): Array<UserMenu> {
     let useMenuList: Array<UserMenu> = new Array<UserMenu>();
-    useMenuList.push(new UserMenu(0, 'Sell', 1, 'Y', '', 0));
+    useMenuList.push(new UserMenu(0, 'Sell', 0, 'A', '', 0));
+    useMenuList.push(new UserMenu(10, 'Sell Item', 0, 'A', '', 0));
 
-    useMenuList.push(new UserMenu(1, 'Items', 1, 'Y', '', 0));
-    useMenuList.push(new UserMenu(11, 'Add Item', 1, 'Y', '', 1));
-    useMenuList.push(new UserMenu(12, 'Remove Item', 1, 'Y', '', 1));
-    useMenuList.push(new UserMenu(13, 'Item Details', 1, 'Y', '', 1));
+    useMenuList.push(new UserMenu(1, 'Items', 0, 'A', '', 0));
+    useMenuList.push(new UserMenu(11, 'Add Item', 1, 'A', '', 1));
+    useMenuList.push(new UserMenu(12, 'Remove Item', 1, 'A', '', 1));
+    useMenuList.push(new UserMenu(13, 'Item Details', 1, 'A', '', 1));
 
-    useMenuList.push(new UserMenu(2, 'Order', 1, 'Y', '', 0));
-    useMenuList.push(new UserMenu(21, 'New Order', 1, 'Y', '', 2));
-    useMenuList.push(new UserMenu(22, 'Manage Order', 1, 'Y', '', 2));
-    useMenuList.push(new UserMenu(23, 'Order Details', 1, 'Y', '', 2));
+    useMenuList.push(new UserMenu(2, 'Order', 0, 'A', '', 0));
+    useMenuList.push(new UserMenu(21, 'New Order', 1, 'A', '', 2));
+    useMenuList.push(new UserMenu(22, 'Manage Order', 1, 'A', '', 2));
+    useMenuList.push(new UserMenu(23, 'Order Details', 1, 'A', '', 2));
     return useMenuList;
   }
 
